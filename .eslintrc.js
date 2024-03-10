@@ -4,7 +4,13 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: ['airbnb-base', 'prettier'],
+  extends: [
+    'airbnb-base',
+    'prettier',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended'
+  ],
   plugins: ['prettier'],
   overrides: [
     {
