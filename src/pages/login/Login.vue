@@ -1,24 +1,21 @@
 <template>
- <div>
-   Login
- </div>
+  <div>Login</div>
 </template>
 
 <script>
- export default {
-   name: "Login" ,
-   props: {},
-   components: {},
-   data() {
-     return {}
-   },
-   computed: {},
-   methods: {},
-   created() {},
-   mounted() {},
-   watch: {}
- }
+export default {
+  name: 'Login',
+  props: {},
+  components: {},
+  data() {
+    return {}
+  },
+  computed: {},
+  methods: {},
+  created() {},
+  mounted() {},
+  watch: {}
+}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
