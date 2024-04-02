@@ -23,8 +23,7 @@ instance.interceptors.response.use(
     return res
   },
   (err) => {
-    const { data = {} } = err.response || {}
-    ElMessage.error({ message: data.message || '未知错误,请打开控制台查看!' })
+    ElMessage.error({ message: '未知错误,请打开控制台查看!' })
     return Promise.reject(err)
   }
 )
