@@ -36,7 +36,7 @@
 <script>
 import { User, Lock, View, Hide, Male } from '@element-plus/icons-vue'
 import { login } from '@/api/user'
-import { verifyUserName, verifyPassWord } from '@/utils'
+import { verifyUserName, verifyPassWord, setToken } from '@/utils'
 export default {
   name: 'Login',
   props: {},
@@ -71,7 +71,11 @@ export default {
     },
     async userLogin() {
       const res = await login({ ...this.user })
-      const { data = {} } = res || {}
+      const { data = {} } = res.data || {}
+      setToken('token', data.token)
+      setToken('refreshToken', data.refresh_token)
+      // 跳转到首页
+      this.$router.push('/')
     }
   }
 }
