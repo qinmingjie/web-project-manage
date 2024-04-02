@@ -19,3 +19,26 @@ export function verifyPassWord(rules, value, callback) {
     callback()
   }
 }
+
+export function setToken(name, value) {
+  localStorage.setItem(name, value)
+}
+
+export function getToken(name) {
+  return localStorage.getItem(name)
+}
+
+export function removeToken(name) {
+  localStorage.removeItem(name)
+}
+
+export function clearToken() {
+  localStorage.clear()
+}
+
+export function isAuth() {
+  if (getToken('token')) {
+    return true
+  }
+  return false
+}
