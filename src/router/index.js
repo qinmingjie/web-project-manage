@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const LoginPages = () => import('../pages/login/Login.vue')
 const Layout = () => import('../layout/Layout.vue')
@@ -6,7 +6,9 @@ const Layout = () => import('../layout/Layout.vue')
 const defaultRouter = [
   {
     path: '/',
-    component: Layout
+    name: 'Home',
+    component: Layout,
+    meta: { requireAuth: true }
   },
   {
     path: '/login',
@@ -16,7 +18,15 @@ const defaultRouter = [
 
 const router = createRouter({
   routes: defaultRouter,
-  history: createWebHashHistory()
+  history: createWebHistory()
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requireAuth) {
+    next('/login')
+  } else {
+    next()
+  }
 })
 
 export default router
