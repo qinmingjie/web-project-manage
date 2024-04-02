@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import 'element-plus/theme-chalk/src/message.scss'
+import 'element-plus/dist/index.css'
 import App from './App.vue'
 import store from './store/index'
 
