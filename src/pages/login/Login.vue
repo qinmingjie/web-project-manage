@@ -96,6 +96,9 @@ export default {
   }
   .el-form-item {
     margin-bottom: 22px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
   .password-wrap {
     :deep(.el-input__suffix) {
