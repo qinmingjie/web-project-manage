@@ -16,10 +16,9 @@ export function register(data) {
   })
 }
 
-export function getUser(data) {
+export function getUser(params) {
   return instance({
-    url: '/user/:id',
-    method: 'GET',
-    data
+    url: `/user/${params.id}`,
+    method: 'GET'
   })
 }
