@@ -1,21 +1,7 @@
 <template>
-  <div>Layout</div>
+  <div class="layout-comp">Layout</div>
 </template>
 
-<script>
-export default {
-  name: 'Layout',
-  props: {},
-  components: {},
-  data() {
-    return {}
-  },
-  computed: {},
-  methods: {},
-  created() {},
-  mounted() {},
-  watch: {}
-}
-</script>
+<script name="Layout" setup></script>
 
 <style lang="scss" scoped></style>
